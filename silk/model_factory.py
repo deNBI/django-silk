@@ -86,7 +86,7 @@ class RequestModelFactory:
         to the name. So, for example, a header called X-Bender would be mapped to the META key HTTP_X_BENDER."
         """
         headers = {}
-        sensitive_headers = {'AUTHORIZATION'}
+        sensitive_headers = SilkyConfig().SILKY_SENSITIVE_HEADERS
 
         for k, v in self.request.META.items():
             if k.startswith('HTTP') or k in ('CONTENT_TYPE', 'CONTENT_LENGTH'):

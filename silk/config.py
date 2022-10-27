@@ -19,7 +19,7 @@ class SilkyConfig(metaclass=Singleton):
         'SILKY_AUTHENTICATION': False,
         'SILKY_AUTHORISATION': False,
         'SILKY_PERMISSIONS': default_permissions,
-        'SILKY_MAX_RECORDED_REQUESTS': 10**4,
+        'SILKY_MAX_RECORDED_REQUESTS': 10 ** 4,
         'SILKY_MAX_RECORDED_REQUESTS_CHECK_PERCENT': 10,
         'SILKY_MAX_REQUEST_BODY_SIZE': -1,
         'SILKY_MAX_RESPONSE_BODY_SIZE': -1,
@@ -32,7 +32,9 @@ class SilkyConfig(metaclass=Singleton):
         'SILKY_JSON_ENSURE_ASCII': True,
         'SILKY_ANALYZE_QUERIES': False,
         'SILKY_EXPLAIN_FLAGS': None,
-        'SILKY_SENSITIVE_KEYS': {'username', 'api', 'token', 'key', 'secret', 'password', 'signature'}
+        'SILKY_SENSITIVE_KEYS': {'username', 'api', 'token', 'key', 'secret', 'password', 'signature'},
+        'SILKY_SENSITIVE_HEADERS': {'AUTHORIZATION'}
+
     }
 
     def _setup(self):
